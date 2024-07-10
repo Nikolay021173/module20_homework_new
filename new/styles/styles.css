@@ -1,0 +1,1791 @@
+/*Общие стили css*/
+@font-face {
+    src: url('../fonts/NunitoSans/NunitoSans-Italic-VariableFont_YTLC_opsz_wdth_wght.ttf');
+    font-family: "Nunito Sans Italic";
+}
+
+@font-face {
+    src: url('../fonts/NunitoSans/NunitoSans-VariableFont_YTLC_opsz_wdth_wght.ttf');
+    font-family: "Nunito Sans";
+}
+
+@font-face {
+    src: url('../fonts/YesevaOne/YesevaOne-Regular.ttf');
+    font-family: "Yeseva One";
+}
+@media screen and (min-width: 1300px) and (max-width: 2000px) {
+    /*************Общие стили*********************/
+/**********Принцип KISS***************************/
+body { 
+  font-family: Nunito Sans;
+}
+
+body, body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+/***************************************************/
+/*********Принцип DRY****************/
+.repair-in-rostov > .paragraph + .paragraph,
+.button-block > .button:last-child,
+.compl-proj > .paragraph + .paragraph,
+.div-0 > .paragraph:nth-child(3),
+.div-1 > .paragraph:nth-child(3),
+.last-div > .paragraph:nth-child(3),
+.online > .title-h2,
+.our-repairs > .title-h2,
+.questions > .title-h2,
+.our-adress > .title-h2,
+.play-img-mob,
+.reques-video-broadcast-repair-mob,
+.l-dir,
+.r-dir,
+.map-mob,
+.communication-method-mob {
+    display: none;
+}
+/************************************************/
+.container {
+    max-width: 1263px;
+    margin: 0 auto;
+}
+/******Стилизация для всех списков меню свёрстанных ввиде строки****/
+.menu-row {
+    display: flex; 
+    justify-content: center;
+    list-style-type: none; 
+ }
+/*******************************************************************/
+/***Стилизации для checkbox***/
+  .checkbox{
+    display: none;
+  }
+
+  .fake{
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: #E3B873;
+    color: #fff;
+    justify-content: center;
+  }
+
+  .fake::before{
+    content:"\2714";
+    opacity: 0;
+    transition: .2s;
+  }
+  .checkbox:checked + .fake::before{
+    opacity: 1;
+  }
+ /*****Расположение checkbox на форме******/
+ .form-check--position1 {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.form-check--position2 {
+    text-align: center;
+    margin-top: 33px;
+} 
+/***********************************************/
+/***Стилизации для label***/
+/******Принцип SOLID*************/
+.label {
+    cursor: pointer;
+    text-align: left;
+}
+
+.label--font-size13px {
+    font-size: 13px;
+    line-height: 21.28px; 
+}
+
+.label--font-size14px {
+    font-size: 14px;
+    line-height: 21.92px; 
+}
+
+.label--grey {
+    color: rgba(54, 54, 54, 0.5); 
+}
+
+.label--black {
+    color: rgba(19, 19, 19, 1); 
+}
+
+.label--white1 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.label--white2 {
+    color: rgba(255, 255, 255, 0.5);
+}
+/*************************************************/
+/***Стилизации для input***/
+/******Принцип SOLID*************/
+.input {
+    border-top: none;
+    border-left: none;
+    border-right: none;  
+    font-size: 14px;
+    line-height: 22.92px;
+    text-align: left;
+}
+
+.input--white {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(54, 54, 54, 0.3) 
+}
+
+.input--white::placeholder {
+    color: rgba(54, 54, 54, 1);
+}
+
+.input--black {
+    background-color: rgba(19, 19, 19, 1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.input--black::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+
+.input--font-weight {
+    font-weight: 400;
+}
+
+.input--width231px {
+    width: 231px;
+}
+
+.input--width408px {
+    width: 408px;
+}
+
+.input--width517px {
+    width: 517px;
+}
+/*****************************************/
+/***Стилизации для кнопок***/
+/******Принцип SOLID*************/
+.button {
+  /*  font-family: Nunito Sans;*/
+    color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-align: center;   
+}
+
+.button--big {
+    width: 207px;
+    height: 51px;
+}
+
+.button--little {
+  width: 161px;
+  height: 37px;
+}
+
+.button--yellow {
+    background-color: rgba(227, 184, 115, 1);
+    box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
+    outline: 0;
+    border: 0; 
+}
+
+.button--transparent {
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button--italic {
+    font-style: italic;
+}
+
+.button--normal {
+    font-style: normal;
+}
+
+.button--font-size11px {
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.button--font-size13px {
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.button--font-weight {
+    font-weight: 400;
+}
+
+.button--position1 {
+    margin-top: 39px;
+    margin-bottom: 27px;
+    margin-left: 200px;
+}
+
+.button--position2 {
+    margin-bottom: 34px;
+    margin-top: 50px;
+}
+
+.button-block {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/**Стилизация для блоков inputs-and-button**/
+/******Принцип SOLID*************/
+.inputs-and-button {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.inputs-and-button--width408px {
+    width: 408px;
+}
+
+.inputs-and-button--width520px {
+    width: 520px;
+}
+
+.inputs-and-button--position1 {
+    margin: 39px 49px; 
+}
+
+.inputs-and-button--position2 {
+    margin-top: 35px;
+    margin-bottom: 6px; 
+}
+/***************************************/
+/****Стилизация блоков label-input******/ 
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input--position1 {
+    margin-top: 48px;
+}
+/*******************************************/
+/**Стилизации для заголовков***/
+/*Стилизация заголовка уровня h1*/
+.title-h1 {
+    font-family: Yeseva One;
+    font-size: 40px;
+    line-height: 53.13px;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    width: 516px;
+    margin: 0;
+}
+
+.title-span-h1 {
+    color: rgba(227, 184, 115, 1);
+}
+
+/*Стилизации заголовка уровня h2*/
+/******Принцип SOLID*************/
+.title-h2 {
+    font-family: Yeseva One;
+    font-size: 27px;
+    line-height: 37.42px;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgba(227, 184, 115, 1);
+    }
+
+.title-h2--font-weight {
+        font-weight: 400;
+    } 
+
+.title-h2--letter-spacing {
+        letter-spacing: -0.07em;
+    } 
+
+    .title-h2--width253px {
+        width: 253px;
+    }
+    
+    .title-h2--width280px {
+        width: 280px;
+    } 
+    /*Стилизации заголовка уровня h3*/
+    /******Принцип SOLID*************/
+    .title-h3 {
+        text-transform: uppercase;
+    } 
+ 
+    .title-h3--transform-none {
+        text-transform: none;
+    } 
+
+    .title-h3--center{
+        text-align: center;
+    }
+
+    .title-h3--left{
+        text-align: left;
+    }
+    
+    .title-h3--yeseva-one {
+        font-family: Yeseva One;
+    }
+
+    .title-h3--nunito-sans {
+       /* font-family: Nunito Sans;*/
+    }
+
+    .title-h3--font-size18px {
+        font-size: 18px;
+        line-height: 25.78px;
+    }
+
+    .title-h3--font-size20px {
+        font-size: 20px;
+        line-height: 27.72px;
+    }
+
+    .title-h3--yellow {
+        color: rgba(227, 184, 115, 1);
+    }
+
+    .title-h3--white {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .title-h3--black {
+        color: rgba(24, 24, 24, 1);
+    }
+
+    .title-h3--width589px {
+        width: 589px;
+    }  
+
+    .title-h3--width224px {
+        width: 224px;
+    }  
+
+    .title-h3--width166px {
+        width: 166px;
+    }  
+    
+    .title-h3--position1 {
+        margin-top: 52px;
+    }
+
+    .title-h3--position2 {
+        padding-top: 25px;
+        padding-left: 24px;
+        padding-bottom: 13px;
+    }
+
+    .title-h3--position3 {
+        margin: auto;
+        padding-top: 28px;
+    }
+
+    .title-h3--position4 {
+        padding-top: 34px;
+        padding-bottom: 10px;
+    }
+/****************************************************************/
+/**Стилизации для параграфов***/
+/******Принцип SOLID*************/
+.paragraph {
+   /* font-family: Nunito Sans;*/
+}
+
+.paragraph--center {
+    text-align: center;
+}
+
+.paragraph--left {
+    text-align: left;
+}
+
+.paragraph--font-weight {
+    font-weight: 400;
+}
+
+.paragraph--font-size22px {
+    font-size: 22px;
+    line-height: 36.01px; 
+}
+
+.paragraph--font-size18px {
+    font-size: 18px;
+    line-height: 36.83px;
+}
+
+.paragraph--font-size14px {
+    font-size: 14px;
+    line-height: 26.73px;
+}
+
+.paragraph--font-size13px {
+    font-size: 13px;
+    line-height: 23.4px;
+}
+
+.paragraph--white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.paragraph--black {
+    color: rgba(24, 24, 24, 1);
+}
+
+.paragraph--grey {
+    color: rgba(149, 149, 149, 1);
+}
+
+.paragraph--width681px {
+    width: 681px;  
+}
+
+.paragraph--width524px {
+    width: 524px;  
+}
+
+.paragraph--width442px {
+    width: 442px;  
+}
+
+.paragraph--width400px {
+    width: 400px;  
+}
+
+.paragraph--width324px {
+    width: 324px;  
+}
+
+.paragraph--width100px {
+    width: 100px;  
+}
+
+.paragraph--position1 {
+    margin-bottom: 92px;  
+}
+
+.paragraph--position2 {
+    padding-left: 20px;  
+}
+
+.paragraph--position3 {
+    margin-bottom: 32px;
+    margin-top: 19px;  
+}
+
+.paragraph--position4 {
+    margin-bottom: 39px;
+}
+
+.paragraph--position5 {
+    margin-top: 34px;
+}
+/*******************************************************************/
+/**Стилизация для div с текстом***/
+/******Принцип SOLID*************/
+.div-with-text {
+    text-align: left;
+}
+
+.div-with-text--uppercase {
+    text-transform: uppercase;  
+}
+
+.div-with-text--nunito-sans {
+  /*  font-family: Nunito Sans;*/
+}
+
+.div-with-text--yeseva-one {
+    font-family: Yeseva One;
+}
+
+.div-with-text--font-weight {
+    font-weight: 400;
+}
+
+.div-with-text--font-size14px { 
+    font-size: 14px;
+    line-height: 19.1px;
+}
+
+.div-with-text--font-size18px { 
+    font-size: 18px;
+    line-height: 25.78px;
+}
+
+.div-with-text--black {
+    color: rgba(54, 54, 54, 1); 
+}
+
+.div-with-text--yellow {
+    color: rgba(227, 184, 115, 1); 
+}
+
+.div-with-text--white {
+    color: rgba(255, 255, 255, 1); 
+}
+
+.div-with-text--background-yellow {
+    background-color: rgba(227, 184, 115, 1);
+    box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.3); 
+}
+
+.div-with-text--width {
+    width: 194px; 
+}
+
+.div-with-text--position1 {
+    margin-top: 27px;
+}
+
+.div-with-text--position2 {
+    margin-top: 17px;  
+}
+
+.div-with-text--position3 {
+    margin-left: 5px;
+    margin-top: 25px; 
+}
+
+.div-with-text--position4 {
+    padding: 15px 17px;
+    margin-left: 31px;
+    margin-top: -27px;
+}
+/*******************************************************************/
+.header,
+.footer {
+    background-color: rgba(19, 19, 19, 1);
+}
+
+.last-div/*Стилизация для вспомогательного div*/ {
+    margin-right: 52px;
+}
+
+/******************************************************************/
+/********Стили для header и footer********************************/
+.container-header,
+.container-footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.container-header {
+    padding-top: 14px; 
+    padding-bottom: 15px;
+}
+
+.container-footer {
+    padding-top: 40px; 
+    padding-bottom: 39px;
+}
+
+
+ .header-footer-menu__link {
+    text-align: left;
+     text-decoration: none;
+     text-transform: uppercase; 
+    font-size: 11px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 1); 
+    margin-right: 47px;
+}
+
+.header-footer-menu__link--active {
+    color:rgba(227, 184, 115, 1);
+    font-size: 11px;
+    line-height: 15px;
+    text-decoration: none;
+    text-transform: uppercase; 
+    margin-right: 47px;
+}
+
+.logo, 
+.telephon {
+   font-size: 11px;
+   line-height: 15px;
+   text-align: left;
+   color: rgba(227, 184, 115, 1);
+   text-transform: uppercase;
+}
+/******************************************************************************/
+/*********** Стили для секции Ремонт под ключ сделанный в Ростове (turnkey-repair-rostov)*/
+.turnkey-repair-rostov {
+    background-image: url('../images/show-room-company.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 707px;
+    background-blend-mode: overlay;
+    background-size: cover;
+ }
+
+.repair-in-rostov {
+    padding-top: 204px;
+    padding-bottom: 208px;
+ }
+/******************************************************************************/
+/*********** Стили для секции Завершённые проекты (completed-projects-example)*/
+.completed-projects-example {
+    background-color: rgba(19, 19, 19, 1);
+ }
+
+ .completed-projects {
+    padding-top: 107px;
+    padding-bottom: 415px;
+}
+
+.compl-proj {
+    margin-right: 45px;
+}
+
+.compl-proj-rostov
+ {
+    display: flex;
+    justify-content: start;
+    margin-top: 45px;
+}
+
+.compl-proj-menu__link {
+    font-family: Yeseva One;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.4px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: left;
+     text-decoration: none;
+     text-transform: uppercase; 
+     margin-right: 61px;
+}
+
+.compl-proj-menu__link--active {
+    font-family: Yeseva One;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.4px;
+    color:rgba(227, 184, 115, 1);    
+    text-align: left;
+    text-decoration: underline;
+    text-transform: uppercase; 
+    margin-right: 61px;
+}
+
+.project-rostov {
+    width: 362px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 42px;
+ }
+
+.compl-proj-menu {
+    margin-left: 400px;
+    text-align: right;
+}
+
+.rostov-on-don-admiral-photo-mob {
+    display: none;
+}
+
+.rostov-on-don-admiral-photo {
+    width: 679px;
+    height: 482px;
+    background-image: url('../images/rostov-on-don-admiral.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.switch {
+    margin-top: 80px;
+}
+/********************************************************************************/
+/*********** Стили для секции Видео-трансляция ремонта (online-controle)*/
+.video-camera-img {
+    margin-top: 13px;
+}
+
+.online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -370px;
+    padding-bottom: 148px;
+}
+
+.video-repair {
+    width: 817px;
+    height: 434px;
+    background-image: url('../images/getting-the-job-done.jpg');
+    background-color: rgba(24, 24, 24, 1);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    margin-top: 31px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+hr {
+    width: 55px;
+    height: 2px;
+    background: rgba(227, 184, 115, 1);
+    text-align: center;
+    margin-top: 63px;
+    margin-bottom: 34px;
+}
+
+.play-img {
+    margin-top: 158px;
+}
+
+.reques-video-broadcast-repair {
+    width: 769px;
+}
+/**********************************************************************************/
+/*********** Стили для секции Какие ремонтные работы мы делаем (types-of-repair)*/
+.key-and-hammer {
+    margin-top: 13px;
+    margin-bottom: 31px;
+}
+
+.our-repairs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 198px;
+}
+.application-departure-measurer {
+    background-color: rgba(19, 19, 19, 1);
+    width: 506px;
+    height: 509px;
+    margin-left: 206px;
+    margin-top: 50px;
+}
+
+.measurings {
+    max-width: 1263px;
+    margin-top: 230px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../images/types-of-repair-fon.jpg);
+    background-repeat: no-repeat;
+}
+
+.measuring-services {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 47px;
+}
+
+.measuring-services-list {
+    width: 395px;
+    margin-top: 60px;
+    margin-left: 220px;
+}
+
+.discount-on-materials {
+    align-self: flex-end;
+    margin-top: -38px;
+    margin-right: 170px;
+}
+
+.the-repairs-that-we-do {
+    width: 1236px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redecorating-photo {
+    background-image: url('../images/redecorating.jpg');
+    background-repeat: no-repeat;
+    width: 392px;
+    height: 421px;
+}
+
+.repairs-made {
+    width: 330px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+    margin-top: -127px;
+    margin-left: 31px;
+    padding-bottom: 20px;
+}
+
+.repair-list {
+    list-style-position: inside;
+    margin-left: 34px;
+    margin-bottom: 23px;
+}
+
+.repair-list__item {
+    font-size: 13px;
+    line-height: 26.6px;
+    text-align: left;
+    color: rgba(149, 149, 149, 1);
+}
+
+.overhaul-photo {
+    background-image: url('../images/overhaul.jpg');
+    background-repeat: no-repeat;
+    width: 392px;
+    height: 421px;
+}
+
+.designer-repair-photo {
+    background-image: url('../images/designer-repair.jpg');
+    background-repeat: no-repeat;
+    width: 392px;
+    height: 421px;
+} 
+
+.discount-on-materials {
+    display: flex;
+    justify-content: flex-start;
+}
+/***********************************************************************************/
+/*********** Стили для секции Каталог наших работ (catalog-of-our-works)*/
+.catalog-of-our-works {
+    background-image: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), 
+    url('../images/catalog-work-fon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 864px;
+    
+}
+
+.our-works {
+    display: flex;
+    justify-content: space-between;
+   margin-bottom: 37px;
+}
+
+.works {
+    padding-top: 137px;
+}
+
+.catalog-repairs-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ .catalog-repairs__item {
+   margin-top: 13px;
+}
+
+.catalog-repairs__link {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38.19px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.catalog-repairs__link--active {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38.19px;
+    color: rgba(227, 184, 115, 1);
+    text-decoration: underline;
+
+}
+
+.works-photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 165px;
+}
+
+.completed-work-1 {
+    background-image: url('../images/completed-work-1.jpg');
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 557px; 
+    margin-left: 69px;
+    margin-top: -39px; 
+}
+
+.completed-work-2 {
+    background-image: url('../images/completed-work-3.jpg');
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 275px;
+    margin-bottom: 37px;
+    margin-top: -111px;
+}
+
+.completed-work-3 {
+    background-image: url('../images/completed-work-2.jpg');
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 349px;
+    margin-left: 69px;
+    margin-top: 39px;
+}
+
+.completed-work-4 {
+    background-image: url('../images/completed-work-4.jpg');
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 625px; 
+    margin-top: -320px;
+}
+/********************************************************************************************/
+/*********** Стили для секции Отзывы наших клиентов (our-clients)*/
+.clients-icon {
+     margin-top: 13px;
+     margin-bottom: 24px;
+}
+
+.feedback {
+    width: 1236px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer-feedback {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.04);
+    width: 376px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.clients-photo-and-name {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-top: 24px;
+}
+
+.clients {
+    padding-top: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.par-reviews {
+    font-weight: 400;
+    line-height: 23.4px;
+    color: rgba(149, 149, 149, 1);
+    width: 324px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.period-of-execution {
+    margin-left: -14px;
+    margin-top: -43px;
+}
+/********************************************************************************************/
+/*** Стили для секции Вопросы клиентов и как нас найти (questions-and-feedback)*/
+.screensaver-white {
+    background-image: url('../images/Frame.jpg');
+    background-repeat: no-repeat;
+    height: 330px;
+}
+
+.our-adress {
+    background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%),
+    url('../images/image72.jpg');
+    background-repeat: no-repeat;
+    height: 954px;  
+}
+
+.map {
+        width: 925px;
+        height: 465px;
+        background-image: url('../images/map.jpg');
+    }
+
+.our-adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions {
+    background-color: rgba(19, 19, 19, 1);
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -222px;
+    width: 883px;
+}
+
+.communication-method {
+    width: 71px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    margin-top: 26px;
+    margin-bottom: 43px;
+}
+/****************************************************************************/
+}
+
+@media screen and (min-width: 375px) and (max-width: 1300px) {
+     /*************Общие стили*********************/
+     body { 
+        font-family: Nunito Sans;
+      }
+      
+      body, body * {
+          margin: 0;
+          padding: 0;
+          box-sizing: content-box;
+      }
+ 
+      .header-footer-menu, 
+      .footer,  
+      .container-header > .button,
+      .button-block > .button:nth-child(2),
+      .div-0 > .paragraph:nth-child(2),
+      .div-1 > .paragraph:nth-child(2),
+      .last-div > .paragraph:nth-child(2),
+      .compl-proj > .paragraph:nth-child(2),
+      .paragraph--font-size22px,
+      .paragraph--font-size18px,
+      .title-h3--font-size20px,
+      .compl-proj-menu,
+      .switch,
+      .rostov-on-don-admiral-photo,
+      .play-img, 
+      .reques-video-broadcast-repair,
+      .measurings,
+      .discount-on-materials,
+      .catalog-repairs-list,
+      .our-clients,
+      .communication-method {
+        display: none;
+    }
+
+    .container {
+        max-width: 375px;
+        margin-left: 18px;
+    }
+
+      /***Стилизации для кнопок***/
+      /******Принцип SOLID*************/
+      .button {
+        color: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+        text-transform: uppercase;
+        text-align: center;   
+    }
+    
+    .button--big,
+    .button--little {
+        width: 340px;
+        height: 51px;
+    }
+    
+    .button--yellow {
+        background-color: rgba(227, 184, 115, 1);
+        box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
+        outline: 0;
+        border: 0; 
+    }
+    
+    .button--transparent {
+        border: 1px solid rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .button--italic {
+        font-style: italic;
+    }
+    
+    .button--normal {
+        font-style: normal;
+    }
+    
+    .button--font-size11px {
+        font-size: 11px;
+        line-height: 15px;
+    }
+    
+    .button--font-size13px {
+        font-size: 13px;
+        line-height: 27px;
+    }
+    
+    .button--font-weight {
+        font-weight: 400;
+    }
+    
+    .button--position1 {
+        margin-top: 39px;
+        margin-bottom: 27px;
+        margin-left: 200px;
+    }
+    
+    .button--position2 {
+        margin-bottom: 46px;
+        margin-top: 60px;
+    }
+
+    .button--position3 {
+        margin-top: 26px;
+    }
+
+    .button--position4 {
+        margin-top: 62px;
+        margin-bottom: -26px;
+    }
+    
+    .button-block {
+        display: flex;
+        flex-direction: column;
+    }
+      
+/***Стилизации для label***/
+/******Принцип SOLID*************/
+.label {
+    cursor: pointer;
+    text-align: left;
+}
+
+.label--font-size13px {
+    font-size: 13px;
+    line-height: 21.28px; 
+}
+
+.label--font-size14px {
+    font-size: 14px;
+    line-height: 21.92px; 
+}
+
+.label--white1 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.label--white2 {
+    color: rgba(255, 255, 255, 0.5);
+}
+/*************************************************/
+/***Стилизации для input***/
+/******Принцип SOLID*************/
+.input {
+    border-top: none;
+    border-left: none;
+    border-right: none;  
+    font-size: 14px;
+    line-height: 22.92px;
+    text-align: left;
+}
+
+.input--black {
+    background-color: rgba(19, 19, 19, 1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.input--black::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+
+.input--width340px {
+    width: 340px;
+}
+/***Стилизации для checkbox***/
+      .label {
+        cursor: pointer;
+      }
+      .checkbox{
+        display: none;
+      }
+      .fake{
+        display: inline-flex;
+        width: 18px;
+        height: 18px;
+        background: #E3B873;
+        color: #fff;
+        justify-content: center;
+      }
+      .fake::before{
+        content:"\2714";
+        opacity: 0;
+        transition: .2s;
+      }
+      .checkbox:checked + .fake::before{
+        opacity: 1;
+      }
+/*****Расположение checkbox на форме******/
+.form-check--position1 {
+    text-align: left;
+    margin-top: 22px;
+}
+
+.form-check--position2 {
+    text-align: left;
+    margin-top: 27px;
+} 
+/***********************************************/
+/****Стилизация блоков label-input******/ 
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input--position2 {
+    margin-top: 62px;
+}      
+
+.inputs-and-button {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+}
+/**********************************************/ 
+/*Стилизация заголовка уровня h1*/   
+    .title-h1  {
+        font-family: Yeseva One;
+        font-size: 23px;
+        line-height: 30.55px;
+        text-align: left;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+        width: 339px;
+        margin: 0;
+        padding-top: 85px;
+    }
+
+    .title-span-h1 {
+        color: rgba(227, 184, 115, 1);
+    }
+/****************************************/ 
+/*Стилизация заголовка уровня h2*/   
+.title-h2 {
+    font-family: Yeseva One;
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+.title-h2--font-weight {
+        font-weight: 400;
+    } 
+
+    .title-h2--font-size22px {
+        font-size: 22px;
+        line-height: 30.49px;
+      }  
+
+      .title-h2--font-size20px {
+        font-size: 20px;
+        line-height: 27.72px;
+      } 
+
+      .title-h2--font-size18px {
+        font-size: 18px;
+        line-height: 24.95px;
+      } 
+
+    .title-h2--letter-spacing {
+        letter-spacing: -0.07em;
+    } 
+
+    .title-h2--yellow {
+        color: rgba(227, 184, 115, 1);
+    }
+
+    .title-h2--white {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .title-h2--black {
+        color: rgba(24, 24, 24, 1);
+    }
+
+    .title-h2--width220px {
+        width: 220px;
+    }
+    
+    .title-h2--width280px {
+        width: 280px;
+    } 
+
+    .title-h2--width330px {
+        width: 330px;
+    } 
+
+    .title-h2--position1 {
+        margin-bottom: 20px;
+    }
+
+    .title-h2--position2 {
+        margin-bottom: 52px;
+    }
+
+    .title-h2--position3 {
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 24px;
+    }
+    /**************************************/
+    /*Стилизации заголовка уровня h3*/
+    .title-h3 {
+        text-transform: uppercase;
+    } 
+ 
+    .title-h3--transform-none {
+        text-transform: none;
+    } 
+
+    .title-h3--center{
+        text-align: center;
+    }
+
+    .title-h3--left{
+        text-align: left;
+    }
+    
+    .title-h3--yeseva-one {
+        font-family: Yeseva One;
+    }
+
+    .title-h3--nunito-sans {
+     /*  font-family: Nunito Sans;*/
+    }
+
+    .title-h3--font-size18px {
+        font-size: 14px;
+        line-height: 25.78px;
+    }
+
+    .title-h3--font-size20px {
+        font-size: 20px;
+        line-height: 27.72px;
+    }
+
+    .title-h3--yellow {
+        color: rgba(227, 184, 115, 1);
+    }
+
+    .title-h3--white {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .title-h3--black {
+        color: rgba(24, 24, 24, 1);
+    }
+
+    .title-h3--width589px {
+        width: 589px;
+    }  
+
+    .title-h3--width224px {
+        width: 224px;
+    }  
+
+    .title-h3--width166px {
+        width: 166px;
+    }  
+    
+    .title-h3--position1 {
+        margin-top: 52px;
+    }
+
+    .title-h3--position2 {
+        padding-top: 25px;
+        padding-left: 24px;
+        padding-bottom: 13px;
+    }
+
+    .title-h3--position3 {
+        margin: auto;
+        padding-top: 28px;
+    }
+
+    .title-h3--position4 {
+        padding-top: 34px;
+        padding-bottom: 10px;
+    }
+/****************************************************************/
+/**Стилизации для параграфов***/
+/******Принцип SOLID*************/
+    .paragraph {
+      /*  font-family: Nunito Sans;*/
+    }
+    
+    .paragraph--center {
+        text-align: center;
+    }
+    
+    .paragraph--left {
+        text-align: left;
+    }
+    
+    .paragraph--font-weight {
+        font-weight: 400;
+    }
+    
+    .paragraph--font-size14px {
+        font-size: 14px;
+        line-height: 19.02px;
+    }
+    
+    .paragraph--font-size11px {
+        font-size: 11px;
+        line-height: 18.68px;
+    }
+
+    .paragraph--width100px {
+        width: 100px;  
+    }
+    
+    .paragraph--white {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .paragraph--position3 {
+        margin-bottom: 32px;
+        margin-top: 19px;  
+    }
+
+   .paragraph--position6 {
+        margin-top: 22px;
+        margin-bottom: 75px;
+    }
+
+    .paragraph--position7 {
+        margin-top: 21px;
+        margin-bottom: 61px;
+    }
+/*******************************************************************/
+/**Стилизация для div с текстом***/
+/******Принцип SOLID*************/
+    .div-with-text {
+        text-align: center;
+    }
+    
+    .div-with-text--uppercase {
+        text-transform: uppercase;  
+    }
+    
+    .div-with-text--yeseva-one {
+        font-family: Yeseva One;
+    }
+    
+    .div-with-text--font-size18px { 
+        font-size: 15px;
+        line-height: 20.79px;
+    }
+    
+    
+    .div-with-text--white {
+        color: rgba(255, 255, 255, 1); 
+    }
+
+    .div-with-text--background-yellow {
+        background-color: rgba(227, 184, 115, 1);
+        box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.3); 
+    }
+    
+    .div-with-text--width {
+        width: 194px; 
+    }
+    
+    .div-with-text--position4 {
+        padding: 11px 16px;
+        margin-top: -20px;
+    }
+/******************************************************************/
+/********Стили для header и footer********************************/
+
+    .header
+     {
+        background-color: rgba(19, 19, 19, 1);
+    }
+
+    .container-header
+     {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .logo {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .logo, 
+    .telephon {
+        font-size: 11px;
+        line-height: 15px;
+        text-align: left;
+        text-transform: uppercase;
+}
+
+.logo {
+        color: rgba(227, 184, 115, 1);
+}
+
+.telephon {
+    color: rgba(255, 255, 255, 1);
+
+}
+/******************************************************************/
+/*********** Стили для секции Ремонт под ключ сделанный в Ростове (turnkey-repair-rostov)*/
+.turnkey-repair-rostov {
+    background-image: url('../images-mobil/show-room-company.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 476px;
+    background-blend-mode: overlay;
+    background-size: cover;
+ }
+/*********** Стили для секции Завершённые проекты (completed-projects-example)*/
+.completed-projects-example {
+    background-color: rgba(19, 19, 19, 1);
+ }
+
+ .rostov-on-don-admiral-photo-mob {
+    width: 340px;
+    height: 241px;
+    background-image: url('../images-mobil/rostov-on-don-admiral.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 77px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .l-dir {
+    margin-left: 14px;
+ }
+
+ .r-dir {
+    margin-right: 14px;
+ }
+
+ .compl-proj-rostov
+ {
+    display: flex;
+    justify-content:center;
+    padding-top: 36px;
+}
+
+ .title-compl-projects{
+    margin: 0;
+    width: 225px;
+    margin-left: 51px;
+    margin-bottom: 26px;
+}
+
+.par-compl-projects {
+    line-height: 14.94px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    width: 99px;
+}
+
+.project-rostov {
+    width: 330px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ 
+ .div-1/*Стилизация для вспомогательного div*/ {
+    margin-right: 47px;
+ }
+
+ .last-div/*Стилизация для вспомогательного div*/ {
+    margin-right: 79px;
+}
+/********************************************************************************/
+/*********** Стили для секции Видео-трансляция ремонта (online-controle)*/
+.online-control {
+    background-color: rgba(19, 19, 19, 1);
+ }
+
+ .online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 58px;
+}
+
+.video-repair {
+    width: 340px;
+    height: 207px;
+    background-image: url('../images-mobil/getting-the-job-done.jpg');
+    background-color: rgba(24, 24, 24, 1);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+hr {
+    width: 55px;
+    height: 2px;
+    background: rgba(227, 184, 115, 1);
+    text-align: center;
+    margin-top: 28px;
+}
+
+.reques-video-broadcast-repair {
+    width: 340px;
+}
+
+.par-online-control{
+    line-height: 18.68px;
+    text-align: center;
+}
+
+/**********************************************************************************/
+/*********** Стили для секции Какие ремонтные работы мы делаем (types-of-repair)*/
+.our-repairs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 58px;
+}
+
+.div-mob {
+    margin-bottom: 59px;
+}
+
+.key-and-hammer {
+    margin-bottom: 40px;
+}
+
+.repair-list {
+    padding: 0;
+    padding-left: 36px;
+}
+
+.repair-list__item {
+    font-size: 13px;
+    color: rgba(149, 149, 149, 1);
+    line-height: 22.07px;
+    text-align: left;
+}
+
+.price-per-square-meter {
+    font-family: Yeseva One;
+    font-size: 15px;
+    line-height: 20.79px;
+    text-align: center;
+    text-transform: uppercase; 
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(227, 184, 115, 1);
+    box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.3);
+    padding: 12px 16px;
+    width: 190px;
+    margin-top: -20px;
+
+}
+
+.repairs-made {
+    width: 270px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+    margin-top: -155px;
+    padding-left: 31px;
+    padding-bottom: 37px;
+    box-sizing: border-box;
+}
+
+.redecorating-photo {
+    background-image: url('../images-mobil/redecorating.jpg');
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 365px;
+}
+
+.overhaul-photo {
+    background-image: url('../images-mobil/overhaul.jpg');
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 365px;
+}
+
+.designer-repair-photo {
+    background-image: url('../images-mobil/designer-repair.jpg');
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 365px;
+}
+
+/***********************************************************************************/
+/*********** Стили для секции Каталог наших работ (catalog-of-our-works)*/
+
+.our-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.completed-work-1 {
+    background-image: url('../images-mobil/completed-work-1.jpg');
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 242px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: -121px;
+}
+/********************************************************************************************/
+/*** Стили для секции Вопросы клиентов и как нас найти (questions-and-feedback)*/
+.questions-and-feedback {
+    background-color: rgba(19, 19, 19, 1);
+}
+
+.questions {
+    margin-left: 18px;
+    padding-top: 173px;
+        display: flex;
+        flex-direction: column;       
+}
+
+.map-mob {
+    margin: 0 auto;
+    width: 340px;
+    height: 255px;
+    background-image: url('../images-mobil/map.jpg');
+}
+
+.communication-method-mob {
+    width: 98px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    padding-bottom: 49px;
+}
+}    
